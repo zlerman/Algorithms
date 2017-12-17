@@ -1,0 +1,11 @@
+#!/bin/bash
+
+BRANCH=`git rev-parse --abbrev-ref HEAD`
+
+if [[ "$BRANCH" == "master" ]]; then
+  echo "You are on branch $BRANCH. You should not commit on this branch."
+  echo "If this is a merge commit only, commit with -n to bypass this pre-commit hook."
+  echo "Otherwise, check out a new branch using $git checkout -b feature-name and make a merge request."
+  exit 1
+fi
+
