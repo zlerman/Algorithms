@@ -1,0 +1,34 @@
+{
+  "name": "algorithms-and-data-structures",
+  "version": "0.0.1",
+  "description": "A repository for practicing algorithms and data structures in various examples",
+  "main": "index.js",
+  "dependencies": {
+    "mocha": "^4.0.1"
+  },
+  "devDependencies": {
+    "mocha": "^4.0.1",
+    "npm-run-all": "^4.1.2"
+  },
+  "scripts": {
+    "test-data-structures": "mocha data-structures/test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zlerman/Algorithms.git"
+  },
+  "keywords": [
+    "algorithms",
+    "data",
+    "structures",
+    "review",
+    "interview",
+    "questions"
+  ],
+  "author": " <github.com/chrisjohnryan>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zlerman/Algorithms/issues"
+  },
+  "homepage": "https://github.com/zlerman/Algorithms#readme"
+}

@@ -1,0 +1,16 @@
+Problem: What are the asymptotic worst-case running times for each of the seven
+fundamental dictionary operations (search, insert, delete, successor, predecessor,
+minimum, and maximum) when the data structure is implemented as:
+• An unsorted array.
+Search - O(n) // The array is unsorted so you have to touch every element
+Insert -  O(1) // You can insert anywhere you want
+Delete -  O(n) // You don't know where the element is to delete
+Successor - O(n) // not sure
+Predecessor - O(n) // not sure
+
+• A sorted array.
+Search - O(logn) // You know exactly where the element is
+Insert - O(n) // You have to move every element
+Delete - O(n) // You have to move every element
+Successor - O(1) // you know that successor is after it
+Predecessor - O(1) // you know that predecessor is before it

@@ -20,13 +20,13 @@ describe('SingleLinkedList', function() {
 	var node3 = new Node(3);
 	var node4 = new Node(4);
 	testList.insertInFront(node1);
-	console.log("First node"); testList.printNodes();
+	//console.log("First node"); testList.printNodes();
 	testList.insertInFront(node2);
-	console.log("\n Second node");testList.printNodes();
+	//console.log("\n Second node");testList.printNodes();
 	testList.insertInFront(node3);
-	console.log("\n Third node");testList.printNodes();
+	//console.log("\n Third node");testList.printNodes();
 	testList.insertAtEnd(node4);
-	console.log("\n Node at the end");testList.printNodes();
+	//console.log("\n Node at the end");testList.printNodes();
 	assert.equal(testList.getTail(), node4);
     });
   });
