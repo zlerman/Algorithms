@@ -16,9 +16,50 @@ class BinarySearchTree {
   constructor(root = null) {
     this.root = root;
   }
+  deleteNode(node) {
+    var cursor = new Node();
+    var predecessor = new Node();
+    cursor = this.root;
+    if (this.root === null) {
+      throw new Error("Can't find delete node from empty tree");
+    }
+    if (cursor.data === node.data) {
+      // To delete node, find parent node.
+      predecessor = findPredecessor();
+      // Determine if doomed node is left or right child
+      if (node.data == predecessor.leftChild) {
+        // The next highest node is the left childs right child
+        predecessor.leftChild = node.rightChild;
+      } else {
+        predecessor.rightChild = node.leftChild;
+      }
+    }
+  }
+  findMinimum() {
+    var cursor = new Node();
+    cursor = this.root;
+    if (this.root === null) {
+      throw new Error("Can't find minimum of empty tree");
+    }
+    while (cursor.leftChild != null) {
+      cursor = cursor.leftChild;
+    }
+    return cursor;
+  }
+  findMaximum() {
+    var cursor = new Node();
+    cursor = this.root;
+    if (this.root === null) {
+      throw new Error("Can't find maximum of empty tree");
+    }
+    while (cursor.rightChild != null) {
+      cursor = cursor.rightChild;
+    }
+    return cursor;
+  }
   insertNode(index, node) {
     // If index is null, just make the node the new root
-    if (index === null) {
+    if ( (index === null) || (index.data === undefined) ) {
       this.root = node;
       return;
     }
@@ -40,7 +81,6 @@ class BinarySearchTree {
         index.rightChild = node;
         return;
       } else {
-        // recurse right subtree
         this.insertNode(index.rightChild, node);
         return;
       }
